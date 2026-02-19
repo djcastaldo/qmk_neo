@@ -93,4 +93,49 @@ I2C1_TIMINGR_SCLL    129U
 #    define DRIVER_COUNT                  1  //2
 #    define RGB_MATRIX_LED_COUNT          68   //DRIVER_LED_TOTAL              //RGB_MATRIX_LED_COUNT 
 
+// ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
+// djc: neo defaults above.  my own stuff below
+// ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
+/* rgb settings */
+#    define RGB_MATRIX_DEFAULT_ON true
+#    define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_BAND_VAL
+#    define RGB_MATRIX_DEFAULT_HUE 170
+#    define RGB_MATRIX_DEFAULT_SAT 255
+#    define RGB_MATRIX_DEFAULT_VAL 255
+#    define RGB_MATRIX_DEFAULT_SPD 70
+/* force enable NKRO */
+#    define FORCE_NKRO
+
+/* increase layer count above the default of 5 */
+#    define DYNAMIC_KEYMAP_LAYER_COUNT 16
+
+/* tap time for tap dancing */
+#    define TAPPING_TERM 250
+
+/* enable caps word when both shift keys are tapped */
+#    define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+/* do not allow dynamic macros to nest (can cause infinite loop) */
+#    define DYNAMIC_MACRO_NO_NESTING
+
+/* allow setting constant mode mouse cursor and wheel speeds */
+#    define MK_3_SPEED
+#    define MK_C_OFFSET_0 1
+#    define MK_C_INTERVAL_0 6
+#    define MK_C_OFFSET_1 4
+#    define MK_C_INTERVAL_1 8
+
+/* leader key settings */
+#    define LEADER_TIMEOUT 250
+#    define LEADER_PER_KEY_TIMING
+#    define LEADER_NO_TIMEOUT
+
+/* for tmux send_string delays */
+#    define TMUX_DELAY 25
+#    define CONFIG_VS_LAYR_SEND_STRING_DELAY 35
+/* keyfade settings */
+#    define CONFIG_KEYFADE_START_DELAY 16
+#    define CONFIG_KEYFADE_START_VAL 250
+#    define CONFIG_KEYFADE_CALLBACK_INTERVAL 15
+
 #endif

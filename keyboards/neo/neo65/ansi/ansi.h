@@ -17,3 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #include "quantum.h"
+// 2026 @davex
+enum kb_custom_keycodes {
+    NEW_SAFE_RANGE = SAFE_RANGE
+};
