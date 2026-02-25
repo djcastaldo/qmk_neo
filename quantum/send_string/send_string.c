@@ -16,8 +16,10 @@
 
 #include "send_string.h"
 
-#include <ctype.h>
+//#include <ctype.h>
+#ifndef KEYBOARD_IS_072
 #include <stdlib.h>
+#endif
 
 #include "quantum_keycodes.h"
 #include "keycode.h"
@@ -172,7 +174,12 @@ void send_string_with_delay(const char *string, uint8_t interval) {
                 // delay
                 int     ms      = 0;
                 uint8_t keycode = *(++string);
-                while (isdigit(keycode)) {
+                //while (isdigit(keycode)) {
+                //    ms *= 10;
+                //    ms += keycode - '0';
+                //    keycode = *(++string);
+                //}
+                while (keycode >= '0' && keycode <= '9') {
                     ms *= 10;
                     ms += keycode - '0';
                     keycode = *(++string);
@@ -250,7 +257,9 @@ void send_nibble(uint8_t number) {
     }
 }
 
+
 void tap_random_base64(void) {
+#ifndef KEYBOARD_IS_072
 #if defined(__AVR_ATmega32U4__)
     uint8_t key = (TCNT0 + TCNT1 + TCNT3 + TCNT4) % 64;
 #else
@@ -276,6 +285,7 @@ void tap_random_base64(void) {
             send_char('/');
             break;
     }
+#endif
 }
 
 #if defined(__AVR__)
@@ -305,7 +315,12 @@ void send_string_with_delay_P(const char *string, uint8_t interval) {
                 // delay
                 int     ms      = 0;
                 uint8_t keycode = pgm_read_byte(++string);
-                while (isdigit(keycode)) {
+                //while (isdigit(keycode)) {
+                //    ms *= 10;
+                //    ms += keycode - '0';
+                //    keycode = pgm_read_byte(++string);
+                //}
+                while (keycode >= '0' && keycode <= '9') {
                     ms *= 10;
                     ms += keycode - '0';
                     keycode = pgm_read_byte(++string);

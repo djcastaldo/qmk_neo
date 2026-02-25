@@ -97,6 +97,11 @@ I2C1_TIMINGR_SCLL    129U
 // djc: neo defaults above.  my own stuff below
 // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
 /* rgb settings */
+#define RGB_MATRIX_SKIP_FRAMES 1
+// Disable any effects you don't use specifically, for example:
+#undef RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#undef RGB_MATRIX_KEYPRESSES
+
 #    define RGB_MATRIX_DEFAULT_ON true
 #    define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_BAND_VAL
 #    define RGB_MATRIX_DEFAULT_HUE 170
@@ -139,3 +144,5 @@ I2C1_TIMINGR_SCLL    129U
 #    define CONFIG_KEYFADE_CALLBACK_INTERVAL 15
 
 #endif
+
+#define CONFIG_MAX_SEQ_QUEUE 3
