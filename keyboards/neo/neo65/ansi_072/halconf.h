@@ -18,7 +18,4 @@
 
 #define HAL_USE_I2C TRUE
 
-#define HAL_USE_STREAMS FALSE
-#define HAL_USE_STREAMS_PRINTF FALSE
-
 #include_next <halconf.h>
