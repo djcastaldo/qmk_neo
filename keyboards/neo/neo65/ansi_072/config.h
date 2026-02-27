@@ -96,6 +96,7 @@ I2C1_TIMINGR_SCLL    129U
 // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
 // djc: neo defaults above.  my own stuff below
 // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
+#    define DEBOUNCE 10
 /* rgb settings */
 #    define RGB_MATRIX_DEFAULT_ON true
 #    define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_BAND_VAL
@@ -108,6 +109,9 @@ I2C1_TIMINGR_SCLL    129U
 
 /* increase layer count above the default of 5 */
 #    define DYNAMIC_KEYMAP_LAYER_COUNT 16
+
+/* include layers that are not used on all keyboards */
+#    define CONFIG_HAS_FKEY_LAYR
 
 /* tap time for tap dancing */
 #    define TAPPING_TERM 250
@@ -140,4 +144,4 @@ I2C1_TIMINGR_SCLL    129U
 
 #endif
 
-#define CONFIG_MAX_SEQ_QUEUE 3
+#define CONFIG_MAX_SEQ_QUEUE 1
