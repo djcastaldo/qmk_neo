@@ -138,11 +138,80 @@ I2C1_TIMINGR_SCLL    129U
 /* for tmux send_string delays */
 #    define TMUX_DELAY 25
 #    define CONFIG_VS_LAYR_SEND_STRING_DELAY 35
+
+/* monitored base layers for macos */
+#    define CONFIG_MACOS_BASE_LAYERS { MAC_BASE }
+#    define CONFIG_MACOS_BASE_LAYERS_COUNT 1
+#    define CONFIG_DEFAULT_MAC_LAYR MAC_BASE
+#    define CONFIG_DEFAULT_WIN_LAYR WIN_BASE
+
+/* monitored base layers */
+#    define CONFIG_ALL_BASE_LAYERS { MAC_BASE, WIN_BASE }
+#    define CONFIG_ALL_BASE_LAYERS_COUNT 2
+/* key indexes that changed to shifted version when caps is used */
+#    define CONFIG_CAPSLOCK_SHIFTED ((i > 16 && i < 27) || (i > 31 && i < 41) || (i > 45 && i < 53))
+#    define CONFIG_CAPSWORD_EXTRA (i == 11)
+
 /* keyfade settings */
 #    define CONFIG_KEYFADE_START_DELAY 16
 #    define CONFIG_KEYFADE_START_VAL 250
 #    define CONFIG_KEYFADE_CALLBACK_INTERVAL 15
 
+/* rgb_matrix_indicators_advanced_user settings */
+#    define CONFIG_HAS_LLOCK_KEY
+#    define CONFIG_HAS_KLOCK_KEY
+#    define CONFIG_BLINK_LAYR_EVEN_WITH_KEYCODE_ASSIGNED
+#    define CONFIG_KEY_INDEX_MAX 67
+
+// single indicator config
+#    define CONFIG_RGB_LAYER_INDICATORS { I_INDICATOR }
+#    define CONFIG_RGB_LAYER_INDICATORS_COUNT 1
+
+// more indicator settings
+#    define CONFIG_FLASH_CAPS_ON_ALL_LAYERS
+#    define CONFIG_LOCKED_LAYERS_STOP_FLASHING
+#    define CONFIG_FN_LAYR_COLOR RGB_GREEN
+#    define CONFIG_MREC_KEY_COLOR RGB_MAGENTA
+#    define CONFIG_SHIFT_LAYR_COLOR RGB_ORANGE
+#    define CONFIG_KCTL_LAYR_COLOR RGB_RED
+#    define CONFIG_TMUX_LAYR_COLOR RGB_CYAN
+#    define CONFIG_VS_LAYR_COLOR RGB_PURPLE
+#    define CONFIG_SYM_LAYR_COLOR RGB_BLUE
+#    define CONFIG_WIDE_LAYR_COLOR RGB_TURQUOISE
+#    define CONFIG_CIRC_LAYR_COLOR RGB_CORAL
+#    define CONFIG_EMO_LAYR_COLOR RGB_PURPLE
+#    define CONFIG_FKEY_LAYR_COLOR 0x90,0x90,0x90
+#    define CONFIG_DEFUALT_LAYR_COLOR 0x77,0x77,0x77
+#    define CONFIG_EXTRA_BASE_LAYR_COLORS \
+     { \
+         { I_CAPS, RGB_BLUE }, \
+         { I_TAB, 0x77,0x77,0x77 }, \
+         { I_BSLS, 0x77,0x77,0x77 }, \
+         { I_FKEY, 0x77,0x77,0x77 }, \
+     }
+#    define CONFIG_EXTRA_BASE_LAYR_COLORS_COUNT 4
+#    define CONFIG_ACCENT_KEY_COLOR RGB_YELLOW
+#    define CONFIG_CAPS_WORD_SHIFT_COLOR 0x77,0x77,0x77
+#    define CONFIG_HROWLIGHT_COLOR RGB_GREEN
+#    define CONFIG_FJLIGHT_COLOR RGB_WHITE
+#    define CONFIG_LEADER_COLORA RGB_TURQUOISE
+#    define CONFIG_LEADER_COLORB RGB_CYAN
+#    define CONFIG_KEYLIGHT_STD_COLOR RGB_WHITE
+#    define CONFIG_EEPROM_RESET_DEFAULT_LAYER MAC_BASE
+#    define CONFIG_LOCK_ANIMATION_TIMEOUT 120000
+#    define CONFIG_LOCK_RESTORE_ANIMATION_FROM_SUSPEND_MS 50
+#    define CONFIG_LOCK_ANIMATION_COLOR_HSV HSV_RED
+#    define CONFIG_LOCK_LAYR_EXTRA_FLASH_KEYS { I_LLOCK }
+#    define CONFIG_LOCK_LAYR_EXTRA_FLASH_KEYS_COUNT 1
+
 #endif
 
-#define CONFIG_MAX_SEQ_QUEUE 1
+/* custom sleep setup */
+#    define CONFIG_CUSTOM_SLEEP_TIMEOUT 540000
+#    define CONFIG_CUSTOM_SLEEP_WARNING 5000
+#    define CONFIG_CUSTOM_BLINK_INTERVAL 250
+
+/* this is for the process_key_sequence (good over rdp connections) */
+// larger queues use much more sram
+#    define CONFIG_MAX_SEQ_QUEUE 2
+#    define CONFIG_MAX_KEYS_HELD 5
