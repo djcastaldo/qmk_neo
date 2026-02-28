@@ -96,7 +96,8 @@ I2C1_TIMINGR_SCLL    129U
 // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
 // djc: neo defaults above.  my own stuff below
 // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
-#    define DEBOUNCE 10
+#    define DEBOUNCE_TYPE sym_eager_pk
+#    define DEBOUNCE 5
 /* rgb settings */
 #    define RGB_MATRIX_DEFAULT_ON true
 #    define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_BAND_VAL
