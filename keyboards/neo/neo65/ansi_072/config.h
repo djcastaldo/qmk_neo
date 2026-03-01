@@ -87,7 +87,7 @@ I2C1_TIMINGR_SCLL    129U
 #    define RGB_MATRIX_LED_PROCESS_LIMIT  4
 #    define RGB_MATRIX_LED_FLUSH_LIMIT    26
 // #    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 128
-#    define RGB_MATRIX_STARTUP_VAL        64
+// #    define RGB_MATRIX_STARTUP_VAL        64
 #    define DRIVER_ADDR_1                 0b0110000
 //   #define DRIVER_ADDR_2 0b1010011
 #    define DRIVER_COUNT                  1  //2
@@ -101,7 +101,7 @@ I2C1_TIMINGR_SCLL    129U
 /* rgb settings */
 #    define RGB_MATRIX_DEFAULT_ON true
 #    define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_BAND_VAL
-#    define RGB_MATRIX_DEFAULT_HUE 170
+#    define RGB_MATRIX_DEFAULT_HUE 100
 #    define RGB_MATRIX_DEFAULT_SAT 255
 #    define RGB_MATRIX_DEFAULT_VAL 255
 #    define RGB_MATRIX_DEFAULT_SPD 70
@@ -116,6 +116,7 @@ I2C1_TIMINGR_SCLL    129U
 
 /* tap time for tap dancing */
 #    define TAPPING_TERM 250
+#    define TAPPING_TERM_PER_KEY
 
 /* enable caps word when both shift keys are tapped */
 #    define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
@@ -135,9 +136,11 @@ I2C1_TIMINGR_SCLL    129U
 #    define LEADER_PER_KEY_TIMING
 #    define LEADER_NO_TIMEOUT
 
-/* for tmux send_string delays */
+/* for various delays */
 #    define TMUX_DELAY 25
 #    define CONFIG_VS_LAYR_SEND_STRING_DELAY 35
+#    define CONFIG_RDP_DELAY_KEY 15    // ms between key press/release
+#    define CONFIG_RDP_DELAY_MOD 20    // ms for modifiers
 
 /* monitored base layers for macos */
 #    define CONFIG_MACOS_BASE_LAYERS { MAC_BASE }
@@ -199,11 +202,13 @@ I2C1_TIMINGR_SCLL    129U
 #    define CONFIG_LEADER_COLORB RGB_CYAN
 #    define CONFIG_KEYLIGHT_STD_COLOR RGB_WHITE
 #    define CONFIG_EEPROM_RESET_DEFAULT_LAYER MAC_BASE
+#    define CONFIG_LOCK_ANIMATION RGB_MATRIX_DIGITAL_RAIN
 #    define CONFIG_LOCK_ANIMATION_TIMEOUT 120000
 #    define CONFIG_LOCK_RESTORE_ANIMATION_FROM_SUSPEND_MS 50
-#    define CONFIG_LOCK_ANIMATION_COLOR_HSV HSV_RED
-#    define CONFIG_LOCK_LAYR_EXTRA_FLASH_KEYS { I_LLOCK }
-#    define CONFIG_LOCK_LAYR_EXTRA_FLASH_KEYS_COUNT 1
+//#    define CONFIG_LOCK_ANIMATION_COLOR_HSV HSV_RED
+//#    define CONFIG_LOCK_LAYR_EXTRA_FLASH_KEYS { I_LLOCK }
+//#    define CONFIG_LOCK_LAYR_EXTRA_FLASH_KEYS_COUNT 1
+//#    define CONFIG_LOCK_LAYR_EXTRA_FLASH_COLOR RGB_RED
 
 #endif
 
