@@ -22,7 +22,6 @@
     },
     "rgb_matrix": {
         "driver": "is31fl3741",
-        "max_brightness": 128,
         "animations": {
             "solid_color": true,
             "alphas_mods": true,
