@@ -86,8 +86,8 @@ I2C1_TIMINGR_SCLL    129U
 #    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #    define RGB_MATRIX_LED_PROCESS_LIMIT  4
 #    define RGB_MATRIX_LED_FLUSH_LIMIT    26
-// #    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 128
-// #    define RGB_MATRIX_STARTUP_VAL        64
+//#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 128
+#    define RGB_MATRIX_STARTUP_VAL        64
 #    define DRIVER_ADDR_1                 0b0110000
 //   #define DRIVER_ADDR_2 0b1010011
 #    define DRIVER_COUNT                  1  //2
@@ -156,9 +156,9 @@ I2C1_TIMINGR_SCLL    129U
 #    define CONFIG_CAPSWORD_EXTRA (i == 11)
 
 /* keyfade settings */
-#    define CONFIG_KEYFADE_START_DELAY 16
+#    define CONFIG_KEYFADE_START_DELAY 12
 #    define CONFIG_KEYFADE_START_VAL 250
-#    define CONFIG_KEYFADE_CALLBACK_INTERVAL 15
+#    define CONFIG_KEYFADE_CALLBACK_INTERVAL 10
 
 /* rgb_matrix_indicators_advanced_user settings */
 #    define CONFIG_HAS_LLOCK_KEY
@@ -190,10 +190,9 @@ I2C1_TIMINGR_SCLL    129U
      { \
          { I_CAPS, RGB_BLUE }, \
          { I_TAB, 0x77,0x77,0x77 }, \
-         { I_BSLS, 0x77,0x77,0x77 }, \
          { I_FKEY, 0x77,0x77,0x77 }, \
      }
-#    define CONFIG_EXTRA_BASE_LAYR_COLORS_COUNT 4
+#    define CONFIG_EXTRA_BASE_LAYR_COLORS_COUNT 3
 #    define CONFIG_ACCENT_KEY_COLOR RGB_YELLOW
 #    define CONFIG_CAPS_WORD_SHIFT_COLOR 0x77,0x77,0x77
 #    define CONFIG_HROWLIGHT_COLOR RGB_GREEN

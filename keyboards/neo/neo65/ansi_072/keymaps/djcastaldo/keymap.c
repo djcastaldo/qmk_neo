@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 #include "layers.h"
+#include "keyindex.h"
 #include "process_record_userspace.h"
 
 __attribute__ ((weak))
@@ -352,4 +353,8 @@ void leader_end_user(void) {
 
 uint16_t get_dyn_ltkey(void) {
     return KC_GRV;
+}
+// which led index is under the DYN_LT key?
+uint16_t get_dyn_ltindex(void) {
+    return I_GRV;
 }
