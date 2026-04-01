@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // [MAC_BASE]
 // .--------------------------------------------------------------------------------------------------.
 // :  ______________________________________________________________________________________________  :
-// : |DEsc|| 1  || 2  || 3  || 4  || 5  || 6  || 7  || 8  || 9  || 0  || -  || =  ||LT\ || `~ ||Ins | :
+// : |DEsc|| 1  || 2  || 3  || 4  || 5  || 6  || 7  || 8  || 9  || 0  || -  || =  || \  ||LT`~||Ins | :
 // : |____||____||____||____||____||____||____||____||____||____||____||____||____||____||____||____| :
 // : |LT-TMUX|| Q  || W  || E  || R  || T  || Y  || U  || I  || O  || P  || [  || ]  ||BspFast||PgUp| :
 // : |_______||____||____||____||____||____||____||____||____||____||____||____||____||_______||____| :
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // : |______||______||_____||_____________________________________||_____||_____|  |____||____||____| :
 // `--------------------------------------------------------------------------------------------------`
    [MAC_BASE] = LAYOUT_hot(
-        DUAL_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, LT(EMO_LAYR,KC_BSLS), KC_GRV, KC_INS,
+        DUAL_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSLS, LT(EMO_LAYR,KC_GRV), KC_INS,
         LT(TMUX_LAYR,KC_TAB),   KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,  KC_LBRC,  KC_RBRC,  BSPCFAST,  KC_PGUP,
         TD(CAPSFK_OSL),   KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT,         KC_ENT,           KC_PGDN,
         KC_LSFT,           KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,    RSFT_TD,         KC_UP,  OSL_FKEY,
@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // [WIN_BASE]
 // .--------------------------------------------------------------------------------------------------.
 // :  ______________________________________________________________________________________________  :
-// : |DEsc|| 1  || 2  || 3  || 4  || 5  || 6  || 7  || 8  || 9  || 0  || -  || =  ||DYNL|| `~ ||Ins | :
+// : |DEsc|| 1  || 2  || 3  || 4  || 5  || 6  || 7  || 8  || 9  || 0  || -  || =  || \  ||DYNL||Ins | :
 // : |____||____||____||____||____||____||____||____||____||____||____||____||____||____||____||____| :
 // : |LT-TMUX|| Q  || W  || E  || R  || T  || Y  || U  || I  || O  || P  || [  || ]  ||BspFast||PgUp| :
 // : |_______||____||____||____||____||____||____||____||____||____||____||____||____||_______||____| :
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // : |______||______||_____||_____________________________________||_____||_____|  |____||____||____| :
 // `--------------------------------------------------------------------------------------------------`
     [WIN_BASE] = LAYOUT_hot(
-        DUAL_ESC,  KC_1,  KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8,  KC_9,  KC_0,  KC_MINS,  KC_EQL,  DYN_LT,     KC_GRV,    KC_INS,
+        DUAL_ESC,  KC_1,  KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8,  KC_9,  KC_0,  KC_MINS,  KC_EQL,  KC_BSLS,    DYN_LT,    KC_INS,
         LT(TMUX_LAYR,KC_TAB), KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,  KC_LBRC,  KC_RBRC,    BSPCFAST,  KC_PGUP,
         TD(CAPSFK_OSL),    KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT,         KC_ENT,          KC_PGDN,
         KC_LSFT,            KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,    RSFT_TD,        KC_UP,  OSL_FKEY,
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // [FN_LAYR]
 // .--------------------------------------------------------------------------------------------------.
 // :  ______________________________________________________________________________________________  :
-// : |    ||    ||    ||VRep||    ||CkOt||    ||    ||    ||News||    ||Arow||Wave||V/EM||SLck||Lock| :
+// : |    ||    ||    ||VRep||    ||CkOt||    ||    ||    ||News||    ||Arow||Wave||SLck||V/EM||Lock| :
 // : |____||____||____||____||____||____||____||____||____||____||____||____||____||____||____||____| :
 // : |MO-TMUX||WMl2||WMl1||Mail||RPho||Wpho||    ||    ||    ||    ||    ||MRc1||MRc2||       ||Home| :
 // : |_______||____||____||____||____||____||____||____||____||____||____||____||____||_______||____| :
@@ -114,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // : |______||______||_____||_____________________________________||_____||_____|  |____||____||____| :
 // `--------------------------------------------------------------------------------------------------`
   [FN_LAYR] = LAYOUT_hot(
-   _______,_______,_______,VI_REPLACE,_______,GIT_CHKOUT,_______,_______,_______,GNEWS,_______,ARROW,WAVE,VSEMOLR, KC_SCRL, LLOCK,
+   _______,_______,_______,VI_REPLACE,_______,GIT_CHKOUT,_______,_______,_______,GNEWS,_______,ARROW,WAVE,KC_SCRL, VSEMOLR, LLOCK,
    MO(TMUX_LAYR), SECRET3,SECRET2,SECRET1,SECRET8,SECRET9,_______,_______,_______,_______,_______,DM_REC1,DM_REC2,_______,KC_HOME,
    _______, SECRET4, SECRET5, SECRET6, SECRET7, _______, _______, _______, _______, QK_LEAD, _______, _______,  _______,   KC_END,
    MO(SFT_LAYR),_______,SECRET10,SECRET11,SECRET12,SECRET13,_______,_______,DM_PLY1,DM_PLY2,KC_PAUS,MO(SFT_LAYR), GIT_LOG,_______,
@@ -123,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // [SFT_LAYR]
 // .--------------------------------------------------------------------------------------------------.
 // :  ______________________________________________________________________________________________  :
-// : |Quit||SOC1||SOC2||SOC3||SOC4||SOC5||SOC6||SOC7||SOC8||SOC9||SOC0||VolD||VolU||OvrV||NLck||Lock| :
+// : |Quit||SOC1||SOC2||SOC3||SOC4||SOC5||SOC6||SOC7||SOC8||SOC9||SOC0||VolD||VolU||NLck||OvrV||Lock| :
 // : |____||____||____||____||____||____||____||____||____||____||____||____||____||____||____||____| :
 // : |Menu   ||QLok||Spec||Hide||    ||Time||    || P7 || P8 || P9 || +- ||CrsL||CrsR||       ||Calc| :
 // : |_______||____||____||____||____||____||____||____||____||____||____||____||____||_______||____| :
@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // : |______||______||_____||_____________________________________||_____||_____|  |____||____||____| :
 // `--------------------------------------------------------------------------------------------------`
   [SFT_LAYR] = LAYOUT_hot(
-   WM_QUIT,WM_SOC1,WM_SOC2,WM_SOC3,WM_SOC4,WM_SOC5,WM_SOC6,WM_SOC7,WM_SOC8,WM_SOC9,WM_SOC0,KC_VOLD,KC_VOLU,WM_OVIEW,KC_NUM, LLOCK,
+   WM_QUIT,WM_SOC1,WM_SOC2,WM_SOC3,WM_SOC4,WM_SOC5,WM_SOC6,WM_SOC7,WM_SOC8,WM_SOC9,WM_SOC0,KC_VOLD,KC_VOLU,KC_NUM,WM_OVIEW, LLOCK,
    KC_APP,WM_QLOOK,WM_INSPECT,WM_VHIDDEN,_______, WM_TIME, _______,KC_P7,KC_P8,KC_P9,DUAL_PLUSMIN,CURSORL,CURSORR,_______,KC_CALC,
    _______, WM_APPS, WM_SIRCAT, WM_DOCS, WM_MYCM, KC_MYCM, _______, KC_P4, KC_P5, KC_P6, DUAL_MULTDIV, _______, _______,  MK_HOLD,
    _______, MK_ACCEL2, _______, KC_MPRV, KC_MPLY, KC_MNXT, _______, KC_P1, KC_P2, KC_P3,WM_STATB,KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2,
@@ -186,7 +186,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // [VS_LAYR]
 // .--------------------------------------------------------------------------------------------------.
 // :  ______________________________________________________________________________________________  :
-// : |    || F1 || F2 || F3 || F4 || F5 || F6 || F7 || F8 || F9 ||F10 ||F11 ||F12 ||    ||IsLn||Lock| :
+// : |    || F1 || F2 || F3 || F4 || F5 || F6 || F7 || F8 || F9 ||F10 ||F11 ||F12 ||IsLn||    ||Lock| :
 // : |____||____||____||____||____||____||____||____||____||____||____||____||____||____||____||____| :
 // : |       ||    ||WrdW||ErrL||Renm||    ||    ||UnCm||Info||Oput||Publ||    ||Mtch|| LDel  ||LUp | :
 // : |_______||____||____||____||____||____||____||____||____||____||____||____||____||_______||____| :
@@ -198,7 +198,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // : |______||______||_____||_____________________________________||_____||_____|  |____||____||____| :
 // `--------------------------------------------------------------------------------------------------`
   [VS_LAYR] = LAYOUT_hot(
-   _______,  KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_F7,  KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, _______, VSINSLN, LLOCK,
+   _______,  KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_F7,  KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, VSINSLN, _______, LLOCK,
    _______, _______,VSWRDWP, VSERR, VSRNAME, _______, _______, VSLNCMU, VSINFO, VSOUTPT, VSPUB, _______, VSMATCH, VSDELLN, VSMVLNU,
    _______,   _______, VSLNSRT, VSDUPLN, VSFIND, VSGOTO, VSREPL, VSLJOIN, _______, VSSOLU, _______, _______,      _______, VSMVLND,
    _______,   _______, _______, VSLNCMC, VSCLIPB, _______, VSNOTIF, _______, _______, _______, VSLBCMT, _______,  _______, _______,
@@ -291,7 +291,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // [EMO_LAYR]
 // .--------------------------------------------------------------------------------------------------.
 // :  ______________________________________________________________________________________________  :
-// : |    || E1 || E2 || E3 || E4 || E5 || E6 || E7 || E8 || E9 || E0 || E- || E+ ||    ||ESmi||Lock| :
+// : |    || E1 || E2 || E3 || E4 || E5 || E6 || E7 || E8 || E9 || E0 || E- || E+ ||ESmi||    ||Lock| :
 // : |____||____||____||____||____||____||____||____||____||____||____||____||____||____||____||____| :
 // : |       ||Piza||Burg||Chik||Taco||EDel||Bulb||EIrk|| EI ||EOK ||Pack|| US || PI ||       ||EMrk| :
 // : |_______||____||____||____||____||____||____||____||____||____||____||____||____||_______||____| :
@@ -303,7 +303,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // : |______||______||_____||_____________________________________||_____||_____|  |____||____||____| :
 // `--------------------------------------------------------------------------------------------------`
   [EMO_LAYR] = LAYOUT_hot(
-   _______,   E_K1,   E_K2,   E_K3,   E_K4,   E_K5,   E_K6,   E_K7,   E_K8,   E_K9,   E_K0,  E_MINS,  E_PLUS, _______, E_SMILE, LLOCK,
+   _______,   E_K1,   E_K2,   E_K3,   E_K4,   E_K5,   E_K6,   E_K7,   E_K8,   E_K9,   E_K0,  E_MINS,  E_PLUS, E_SMILE, _______, LLOCK,
    _______,E_PIZZA, E_BURGER, E_CHICKEN, E_TACO, E_TRASH, E_BULB, E_SMIRK, E_I, E_OK, E_PACKAGE, E_FLAGUS, E_FLAGPI, _______, E_EMARK,
    _______,   E_STAR, E_SGLASS, E_DRINK, E_SSHOT, E_GLOBE, E_HASH, E_CMARK, E_KB, E_SNAIL, E_STOP, E_HAND,           _______, E_QMARK,
    _______,       E_BUS, E_TRAIN, E_CAR, E_TAXI, E_BOTTLE, E_NINJA, E_MIC, E_SHH, E_GRIM, E_DIV,           _______, E_POINTU,   E_SAD,
@@ -352,9 +352,9 @@ void leader_end_user(void) {
 }
 
 uint16_t get_dyn_ltkey(void) {
-    return KC_BSLS;
+    return KC_GRV;
 }
 // which led index is under the DYN_LT key?
 uint16_t get_dyn_ltindex(void) {
-    return I_BSLS;
+    return I_GRV;
 }
