@@ -358,3 +358,33 @@ uint16_t get_dyn_ltkey(void) {
 uint16_t get_dyn_ltindex(void) {
     return I_GRV;
 }
+
+// fix for the split backspace leds which don't seem to have working blue channel on neo65
+bool rgb_matrix_indicators_keymap(uint8_t led_min, uint8_t led_max) {
+    uint8_t r = 0, g = 0;
+    switch (get_highest_layer(layer_state)) {
+        case FN_LAYR:
+            g = 255;   // GREEN
+            break;
+
+        case KCTL_LAYR:
+            r = 255;   // RED
+            break;
+        
+        case SFT_LAYR:
+        case MSYM_LAYR:
+        case WSYM_LAYR:
+            r = 255;
+            g = 255;   // YELLOW  
+            break;
+
+        default:
+            r = 0;
+            g = 0;
+            break;
+    }
+
+    rgb_matrix_set_color(14, r, g, 0);
+    return false;
+}
+
