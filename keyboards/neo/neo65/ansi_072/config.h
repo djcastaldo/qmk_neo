@@ -190,9 +190,10 @@ I2C1_TIMINGR_SCLL    129U
      { \
          { I_CAPS, RGB_BLUE }, \
          { I_TAB, 0x77,0x77,0x77 }, \
+         { I_BSLS, 0x77,0x77,0x77 }, \
          { I_FKEY, 0x77,0x77,0x77 }, \
      }
-#    define CONFIG_EXTRA_BASE_LAYR_COLORS_COUNT 3
+#    define CONFIG_EXTRA_BASE_LAYR_COLORS_COUNT 4
 #    define CONFIG_ACCENT_KEY_COLOR RGB_YELLOW
 #    define CONFIG_CAPS_WORD_SHIFT_COLOR 0x77,0x77,0x77
 #    define CONFIG_HROWLIGHT_COLOR RGB_GREEN
