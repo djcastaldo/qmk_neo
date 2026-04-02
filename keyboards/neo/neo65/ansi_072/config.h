@@ -216,7 +216,5 @@ I2C1_TIMINGR_SCLL    129U
 #    define CONFIG_CUSTOM_SLEEP_WARNING 5000
 #    define CONFIG_CUSTOM_BLINK_INTERVAL 250
 
-/* this is for the process_key_sequence (good over rdp connections) */
-// larger queues use much more sram
-#    define CONFIG_MAX_SEQ_QUEUE 2
-#    define CONFIG_MAX_KEYS_HELD 5
+// for key sequnece processing
+#    define CONFIG_MAX_SEQ_QUEUE 3
