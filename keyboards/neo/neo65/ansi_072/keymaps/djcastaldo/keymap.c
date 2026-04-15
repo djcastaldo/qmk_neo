@@ -209,9 +209,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // :  ______________________________________________________________________________________________  :
 // : |    ||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||Lock| :
 // : |____||____||____||____||____||____||____||____||____||____||____||____||____||____||____||____| :
-// : |       ||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||       ||SUP1| :
+// : |       ||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||       ||SUP2| :
 // : |_______||____||____||____||____||____||____||____||____||____||____||____||____||_______||____| :
-// : |        ||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||            ||SUP2| :
+// : |        ||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||            ||SUP3| :
 // : |________||____||____||____||____||____||____||____||____||____||____||____||____________||____| :
 // : |  LShift   ||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN||LTRN|| RShift  ||    ||NBSP| :
 // : |___________||____||____||____||____||____||____||____||____||____||____||_________||____||____| :
@@ -220,8 +220,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // `--------------------------------------------------------------------------------------------------`
   [MSYM_LAYR] = LAYOUT_hot(
    _______, LTRANS,LTRANS,LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, KC_GRV, LLOCK,
-   _______,   LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS,     _______, SUP1,
-   _______,     LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS,           _______, SUP2,
+   _______,   LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS,     _______, SUP2,
+   _______,     LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS,           _______, SUP3,
    KC_LSFT,       LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS, LTRANS,      KC_RSFT,   _______, NBSP,
    _______, _______, TD(SUIT_CYCLE),                _______,               TD(SUP_CYCLE), _______,   _______, _______, _______),
 
@@ -230,9 +230,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // :  ______________________________________________________________________________________________  :
 // : |    ||TD-1||OPT2||OPT3||OPT4||OPT5||OPT6||OPT7||OPT8||OPT9||OPT0||OMIN||OPEQ||OBSL||TGRV||Lock| :
 // : |____||____||____||____||____||____||____||____||____||____||____||____||____||____||____||____| :
-// : |       ||OPTQ||OPTW||TD-E||OPTR||OPTT||OPTY||TD-U||TD-I||OPT0||OPTP||OLBR||ORDR||       ||SUP1| :
+// : |       ||OPTQ||OPTW||TD-E||OPTR||OPTT||OPTY||TD-U||TD-I||OPT0||OPTP||OLBR||ORDR||       ||SUP2| :
 // : |_______||____||____||____||____||____||____||____||____||____||____||____||____||_______||____| :
-// : |        ||OPTA||OPTS||OPTD||OPTF||OPTG||OPTH||OPTJ||OPTK||OPTL||OSEM||OAPO||            ||SUP2| :
+// : |        ||OPTA||OPTS||OPTD||OPTF||OPTG||OPTH||OPTJ||OPTK||OPTL||OSEM||OAPO||            ||SUP3| :
 // : |________||____||____||____||____||____||____||____||____||____||____||____||____________||____| :
 // : |  LShift   ||OPTZ||OPTX||OPTC||OPTV||OPTB||TD-N||OPTM||OCOM||ODOT||OSLS|| RShift  ||    ||NBSP| :
 // : |___________||____||____||____||____||____||____||____||____||____||____||_________||____||____| :
@@ -241,8 +241,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // `--------------------------------------------------------------------------------------------------`
   [WSYM_LAYR] = LAYOUT_hot(
    _______, TD(ACT_1),OPT2,OPT3, OPT4, OPT5, OPT6, OPT7, OPT8, OPT9, OPT0, OPTMIN, OPTEQ, OPTBSL, TD(ACT_GRV), LLOCK,
-   _______, OPTQ, OPTW, TD(ACT_E), OPTR, OPTT, OPTY, TD(ACT_U), TD(ACT_I), OPTO, OPTP, OPTLBR, OPTRBR, _______, SUP1,
-   _______,     OPTA, OPTS, OPTD, OPTF, OPTG, OPTH, OPTJ, OPTK, OPTL, OPTSEM, OPTAPO,            _______,       SUP2,
+   _______, OPTQ, OPTW, TD(ACT_E), OPTR, OPTT, OPTY, TD(ACT_U), TD(ACT_I), OPTO, OPTP, OPTLBR, OPTRBR, _______, SUP2,
+   _______,     OPTA, OPTS, OPTD, OPTF, OPTG, OPTH, OPTJ, OPTK, OPTL, OPTSEM, OPTAPO,            _______,       SUP3,
    KC_LSFT,        OPTZ, OPTX, OPTC, OPTV, OPTB, TD(ACT_N), OPTM, OPTCOM, OPTDOT, OPTSLS,     KC_RSFT, _______, NBSP,
    _______, _______, TD(SUIT_CYCLE),           _______,          TD(SUP_CYCLE), _______,  _______, _______, _______),
 
